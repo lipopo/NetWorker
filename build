@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "构建前端模板..."
+cd ./front
+npm run build
+rm -rf ../template
+mv ./netnet ../template
+echo "构建完成"
+
+echo "构建后端模板..."
+cd ../backend
+./build.sh
+echo "构建完成"
